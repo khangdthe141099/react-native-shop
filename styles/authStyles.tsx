@@ -82,7 +82,7 @@ export const loginStyles = StyleSheet.create({
         width: '100%',
         height: 45,
         marginVertical: 5,
-        borderRadius: 6,
+        borderRadius: 10,
     },
     footer: {
         position: "absolute",

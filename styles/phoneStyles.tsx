@@ -41,7 +41,7 @@ export const phoneStyles = StyleSheet.create({
     input: {
         height: 45,
         fontFamily: 'OkraMedium',
-        width: "100%"
+        width: "100%",
     },
     socialContainer: {
         flexDirection: 'row',
