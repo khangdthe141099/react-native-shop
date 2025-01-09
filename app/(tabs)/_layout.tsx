@@ -1,17 +1,15 @@
 import {Tabs} from 'expo-router';
 import React from 'react';
-import {Platform} from 'react-native';
-
 import {HapticTab} from '@/components/HapticTab';
-import {IconSymbol} from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
+import {Colors} from "@/constants/Colors";
+import {DeliveryTabIcon, DiningTabIcon, LiveTabIcon, ReorderTabIcon} from "@/components/ui/TabIcon";
 
 export default function TabLayout() {
-
     return (
         <Tabs
             screenOptions={{
-                // tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+                tabBarActiveTintColor: Colors.primary,
                 headerShown: false,
                 tabBarButton: HapticTab,
                 tabBarBackground: TabBarBackground,
@@ -28,28 +26,28 @@ export default function TabLayout() {
                 name="delivery"
                 options={{
                     title: 'Delivery',
-                    tabBarIcon: ({color}) => <IconSymbol size={28} name="house.fill" color={color}/>,
+                    tabBarIcon: ({color, focused}) => <DeliveryTabIcon focused={focused}/>,
                 }}
             />
             <Tabs.Screen
                 name="reorder"
                 options={{
                     title: 'Reorder',
-                    tabBarIcon: ({color}) => <IconSymbol size={28} name="paperplane.fill" color={color}/>,
+                    tabBarIcon: ({color, focused}) => <ReorderTabIcon focused={focused}/>,
                 }}
             />
             <Tabs.Screen
                 name="dining"
                 options={{
                     title: 'Dining',
-                    tabBarIcon: ({color}) => <IconSymbol size={28} name="paperplane.fill" color={color}/>,
+                    tabBarIcon: ({color, focused}) => <DiningTabIcon focused={focused}/>,
                 }}
             />
             <Tabs.Screen
                 name="live"
                 options={{
                     title: 'Live',
-                    tabBarIcon: ({color}) => <IconSymbol size={28} name="paperplane.fill" color={color}/>,
+                    tabBarIcon: ({color, focused}) => <LiveTabIcon focused={focused}/>,
                 }}
             />
         </Tabs>

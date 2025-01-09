@@ -9,7 +9,6 @@ import SocialLogin from "@/components/ui/SocialLogin";
 import {router} from "expo-router";
 import useKeyboardOffsetHeight from "@/utils/useKeyboardOffsetHeight";
 
-
 export default function LoginScreen() {
     const animatedValue = useRef(new Animated.Value(0)).current
     const keyboardOffsetHeight = useKeyboardOffsetHeight();

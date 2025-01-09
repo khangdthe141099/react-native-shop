@@ -1,8 +1,8 @@
 import {Platform, StyleSheet} from "react-native";
 import {Colors} from "@/constants/Colors";
-import {screenHeight, screenWidth} from "@/constants";
-import {isBannerHeight} from "@/unistyles/Constants";
+import {isBannerHeight, screenHeight, screenWidth} from "@/constants";
 import {RFValue} from "react-native-responsive-fontsize";
+import {defaultTheme} from "@/styles/unistyles";
 
 export const homeStyles = (isActive: boolean) => StyleSheet.create({
     container: {
@@ -34,15 +34,13 @@ export const homeStyles = (isActive: boolean) => StyleSheet.create({
         width: screenWidth,
         backgroundColor: '#CC152D',
         height: Platform.OS === 'android' ? screenHeight * 0.54 : screenHeight * 0.6,
-        justifyContent: "flex-end",
         position: "absolute",
         zIndex: -3,
-        alignSelf: 'center'
     },
     lottie: {
         width: '100%',
-        bottom: -1,
-        height: screenWidth,
+        bottom: 117,
+        height: screenHeight,
     },
     rollingText: {
         opacity: 0.6,
@@ -51,6 +49,7 @@ export const homeStyles = (isActive: boolean) => StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
+        gap: 4
     },
     flexRowGap: {
         flexDirection: 'row',
@@ -64,7 +63,7 @@ export const homeStyles = (isActive: boolean) => StyleSheet.create({
     translation: {
         paddingVertical: 2,
         paddingHorizontal: 5,
-        borderRadius: 6,
+        borderRadius: defaultTheme.border.md,
         justifyContent: "center",
         alignItems: 'center',
         backgroundColor: Colors.background
@@ -77,7 +76,7 @@ export const homeStyles = (isActive: boolean) => StyleSheet.create({
     profileImage: {
         width: '100%',
         height: '100%',
-        borderRadius: '50%',
+        borderRadius: defaultTheme.border.full,
         resizeMode: 'contain'
     },
     goldenCircle: {
@@ -86,13 +85,13 @@ export const homeStyles = (isActive: boolean) => StyleSheet.create({
         zIndex: 1,
         alignSelf: 'center',
         height: 50,
-        borderRadius: '50%',
+        borderRadius: defaultTheme.border.full,
     },
     profileAvatar: {
         width: 40,
         marginHorizontal: 5,
         height: 40,
-        borderRadius: '50%',
+        borderRadius: defaultTheme.border.full,
         justifyContent: 'center',
         alignItems: 'center'
     },

@@ -1,7 +1,6 @@
 import {StyleSheet} from "react-native";
 import {Colors} from "@/constants/Colors";
-import {screenHeight, screenWidth} from "@/constants";
-import {BOTTOM_TAB_HEIGHT} from "@/unistyles/Constants";
+import {BOTTOM_TAB_HEIGHT, screenHeight, screenWidth} from "@/constants";
 import {RFValue} from "react-native-responsive-fontsize";
 
 export const tabStyles = StyleSheet.create({

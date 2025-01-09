@@ -7,6 +7,10 @@ import {useEffect} from 'react';
 import 'react-native-reanimated';
 
 import {useColorScheme} from '@/hooks/useColorScheme';
+import {Provider} from 'react-redux';
+import {persistor, store} from "@/states/store";
+import {PersistGate} from "redux-persist/integration/react";
+import {SharedStateProvider} from "@/app/(tabs)/SharedContext";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -33,13 +37,19 @@ export default function RootLayout() {
     }
 
     return (
-        <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-            <Stack screenOptions={{headerShown: false}}>
-                <Stack.Screen name="sign-in" options={{headerShown: false}}/>
-                <Stack.Screen name="(tabs)" options={{headerShown: false}}/>
-                <Stack.Screen name="+not-found"/>
-            </Stack>
-            <StatusBar style="auto"/>
-        </ThemeProvider>
+        <Provider store={store}>
+            <PersistGate loading={null} persistor={persistor}>
+                <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+                    <SharedStateProvider>
+                        <Stack screenOptions={{headerShown: false}}>
+                            <Stack.Screen name="sign-in" options={{headerShown: false}}/>
+                            <Stack.Screen name="(tabs)" options={{headerShown: false}}/>
+                            <Stack.Screen name="+not-found"/>
+                        </Stack>
+                        <StatusBar style="auto"/>
+                    </SharedStateProvider>
+                </ThemeProvider>
+            </PersistGate>
+        </Provider>
     );
 }
