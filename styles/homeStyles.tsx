@@ -20,12 +20,13 @@ export const homeStyles = (isActive: boolean) => StyleSheet.create({
     },
     animatedText: {
         fontSize: RFValue(10.5),
-        fontFamily: 'Okra-Bold'
+        fontFamily: 'OkraBold',
+        color: Colors.background
     },
     animatedSubText: {
         fontSize: RFValue(7),
         lineHeight: 9,
-        fontFamily: 'Okra-Bold'
+        fontFamily: 'OkraBold'
     },
     exploreContainer: {
         marginVertical: 10,

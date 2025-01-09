@@ -5,6 +5,7 @@ import {useSharedState} from "@/app/(tabs)/SharedContext";
 import Animated, {Extrapolation, interpolate, useAnimatedStyle} from "react-native-reanimated";
 import Graphics from "@/components/home/Graphics";
 import HeaderSection from "@/components/home/HeaderSection";
+import MainList from "@/components/list/MainList";
 
 export default function Delivery() {
     const insets = useSafeAreaInsets()
@@ -55,6 +56,10 @@ export default function Delivery() {
                 <Animated.View style={[backgroundColorChanges, styles.topHeader]}>
                     <HeaderSection/>
                 </Animated.View>
+            </Animated.View>
+
+            <Animated.View style={[moveUpStyle]}>
+                <MainList />
             </Animated.View>
         </View>
     )

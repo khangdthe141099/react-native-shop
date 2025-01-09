@@ -26,15 +26,17 @@ const LocationHeader: FC<LocationHeaderProps> = () => {
             <SafeAreaView/>
             <View style={styles.flexRowBetween}>
                 <View style={styles.flexRowGap}>
-                    <Icon name="map-marker" color={textColor} iconFamily="MaterialCommunityIcons" size={32}/>
-                </View>
+                    <View style={styles.flexRowGap}>
+                        <Icon name="map-marker" color={textColor} iconFamily="MaterialCommunityIcons" size={32}/>
+                    </View>
 
-                <View>
-                    <TouchableOpacity style={styles.flexRow}>
-                        <CustomText variant="h5" fontFamily="OkraBold" color={textColor}>Cau Giay, Ha Noi</CustomText>
-                        <Icon name="chevron-down" color={textColor} iconFamily="MaterialCommunityIcons" size={18}/>
-                    </TouchableOpacity>
-                    <CustomText fontFamily="OkraMedium" color={textColor}>342 Ho Tung Mau</CustomText>
+                    <View>
+                        <TouchableOpacity style={styles.flexRow}>
+                            <CustomText variant="h5" fontFamily="OkraBold" color={textColor}>Cau Giay, Ha Noi</CustomText>
+                            <Icon name="chevron-down" color={textColor} iconFamily="MaterialCommunityIcons" size={18}/>
+                        </TouchableOpacity>
+                        <CustomText fontFamily="OkraMedium" color={textColor}>342 Ho Tung Mau</CustomText>
+                    </View>
                 </View>
 
                 <View style={styles.flexRowGap}>

@@ -1,15 +1,16 @@
-import {SafeAreaView, TouchableOpacity, View} from "react-native"
+import {Pressable, SafeAreaView, TouchableOpacity, View, Image} from "react-native"
 import React, {FC} from "react";
 import {useAppDispatch, useAppSelector} from "@/states/hooks";
 import {homeStyles} from "@/styles/homeStyles";
 import {useSharedState} from "@/app/(tabs)/SharedContext";
-import {interpolate, useAnimatedStyle} from "react-native-reanimated";
+import Animated, {interpolate, useAnimatedStyle} from "react-native-reanimated";
 import Icon from "@/components/globals/Icon";
 import {Colors} from "@/constants/Colors";
 import {RFValue} from "react-native-responsive-fontsize";
 import RollingContent from 'react-native-rolling-bar'
 import searchBar from "react-native-screens/src/components/SearchBar";
 import CustomText from "@/components/globals/CustomText";
+import {setVegMode} from "@/states/reducers/userSlice";
 
 type SearchBarProps = {}
 
@@ -55,7 +56,24 @@ const SearchBar: FC<SearchBarProps> = () => {
                             })
                         }
                     </RollingContent>
+                    <Icon iconFamily='Ionicons' name="mic-outline" color={isVegMode ? Colors.active : Colors.primary} size={RFValue(20)}/>
                 </TouchableOpacity>
+
+                <Pressable style={styles.vegMode} onPress={() => dispatch(setVegMode(!isVegMode))}>
+                    <Animated.Text style={[textColorAnimation, styles.animatedText]}>
+                        VEG
+                    </Animated.Text>
+                    <Animated.Text style={[textColorAnimation, styles.animatedText, { fontFamily: 'OkraMedium' }]}>
+                        MODE
+                    </Animated.Text>
+                    <Image
+                        source={isVegMode ?
+                            require('@/assets/icons/switch_on.png') :
+                            require('@/assets/icons/switch_off.png')
+                        }
+                        style={styles.switch}
+                    />
+                </Pressable>
             </View>
         </>
     )
