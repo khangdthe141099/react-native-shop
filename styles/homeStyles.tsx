@@ -21,7 +21,7 @@ export const homeStyles = (isActive: boolean) => StyleSheet.create({
     animatedText: {
         fontSize: RFValue(10.5),
         fontFamily: 'OkraBold',
-        color: Colors.background
+        color: Colors.text
     },
     animatedSubText: {
         fontSize: RFValue(7),

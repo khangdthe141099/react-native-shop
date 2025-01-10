@@ -5,7 +5,7 @@ import {screenHeight, screenWidth} from "@/constants";
 export const cardStyles = StyleSheet.create({
     recommendedContainer: {
         marginTop: 25,
-        paddingLeft:10
+        paddingLeft: 10
     },
     mainPadding: {
         padding: 10
@@ -17,10 +17,11 @@ export const cardStyles = StyleSheet.create({
         paddingHorizontal: 15,
     },
     itemContainer: {
-        marginRight: 15,
+        marginTop: 15,
+        marginLeft: 15,
+        marginBottom: 15,
         width: screenWidth * 0.3,
         overflow: 'hidden',
-        marginBottom: 15,
     },
     regularFoodImage: {
         width: screenWidth * 0.28,
@@ -32,6 +33,11 @@ export const cardStyles = StyleSheet.create({
         zIndex: 2,
         top: 5,
         right: 5,
+    },
+    bookmarkContainer: {
+        position: 'absolute',
+        top: 4,
+        right: 4,
     },
     bookmarkIconImage: {
         width: 15,
