@@ -7,7 +7,7 @@ type RestaurantListProps = {}
 const RestaurantList: FC<RestaurantListProps> = () => {
     return (
         <View>
-            <CustomText>Restaurant section</CustomText>
+            <CustomText>Test rebase</CustomText>
         </View>
     )
 }
