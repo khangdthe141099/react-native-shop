@@ -50,6 +50,12 @@ const RecommendedList: FC<RecommendedListProps> = () => {
                     <CustomText fontSize={10} color={Colors.text} fontFamily="OkraMedium" numberOfLines={1}>
                         {item?.name}
                     </CustomText>
+                    <View style={cardStyles.flexRow}>
+                        <Image source={require('@/assets/icons/clock.png')} style={cardStyles.clockIcon}/>
+                        <CustomText fontFamily="OkraMedium" color={Colors.lightText} fontSize={9} numberOfLines={1}>
+                            {`${item.time} • ${item?.distance}`}
+                        </CustomText>
+                    </View>
                 </View>
             </Pressable>
         )

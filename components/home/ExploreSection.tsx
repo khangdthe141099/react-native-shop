@@ -5,6 +5,8 @@ import CustomText from "@/components/globals/CustomText";
 import {Colors} from "@/constants/Colors";
 import Icon from "../globals/Icon";
 import RecommendedList from "@/components/list/RecommendedList";
+import BreakerText from "@/components/ui/BreakerText";
+import RegularFoodList from "../list/RegularFoodList";
 
 type ExploreSectionProps = {}
 
@@ -38,6 +40,9 @@ const ExploreSection: FC<ExploreSectionProps> = () => {
             </View>
 
             <RecommendedList/>
+            <BreakerText text="WHAT'S ON YOUR MIND"/>
+            <RegularFoodList/>
+            <BreakerText text="ALL RESTAURENTS"/>
         </View>
     )
 }
