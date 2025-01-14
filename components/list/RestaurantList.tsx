@@ -2,7 +2,7 @@ import {FlatList, View} from "react-native"
 import {FC} from "react";
 import CustomText from "@/components/globals/CustomText";
 import {cardStyles} from "@/styles/cardStyles";
-import {restaurantItemsData} from "@/utils/dummyData";
+import {recommendedListData, regularFoodData, restaurantItemsData} from "@/utils/dummyData";
 import RestaurantCard from "./RestaurantCard";
 
 type RestaurantListProps = {}
@@ -25,7 +25,7 @@ const RestaurantList: FC<RestaurantListProps> = () => {
             </CustomText>
 
             <FlatList
-                data={restaurantItemsData}
+                data={recommendedListData}
                 scrollEventThrottle={16}
                 bounces={false}
                 showsVerticalScrollIndicator={false}

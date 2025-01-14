@@ -16,7 +16,7 @@ const RecommendedList: FC<RecommendedListProps> = () => {
         return (
             <Pressable
                 onPress={() => {
-                    router.push('/restaurants');
+                    router.push('/restaurant');
                 }}
                 style={cardStyles.itemContainer}>
                 <View style={cardStyles.imageContainer}>

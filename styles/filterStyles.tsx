@@ -1,7 +1,7 @@
 import {StyleSheet} from "react-native";
 import {Colors} from "@/constants/Colors";
 
-export const filtertyles = StyleSheet.create({
+export const filterStyles = StyleSheet.create({
     filterBar: {
         paddingHorizontal: 10,
         paddingBottom:10,

@@ -387,7 +387,7 @@ export const filtersOption = [
     'Pure Veg'
 ]
 
-export const restaurantsItemfiltersOption = [
+export const restaurantsItemFiltersOption = [
     'Veg',
     'Non-veg',
     'Rating 4.0',

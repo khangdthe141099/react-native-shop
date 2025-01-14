@@ -43,6 +43,7 @@ export default function RootLayout() {
                     <SharedStateProvider>
                         <Stack screenOptions={{headerShown: false}}>
                             <Stack.Screen name="sign-in" options={{headerShown: false}}/>
+                            <Stack.Screen name="restaurant" options={{headerShown: false}}/>
                             <Stack.Screen name="(tabs)" options={{headerShown: false}}/>
                             <Stack.Screen name="+not-found"/>
                         </Stack>
